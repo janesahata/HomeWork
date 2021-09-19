@@ -9,9 +9,9 @@ elif operator == "-":
 elif operator == "*":
   print(value_1 * value_2)
 elif operator == "/":
-  if 0 == value_2:
-    print("division by zero")
-  else:
+  try:
     print(value_1 / value_2)
+  except ZeroDivisionError:
+    print("division by zero")
 else:
   print("bad operator")
